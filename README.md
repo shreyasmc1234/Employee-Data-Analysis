@@ -8,7 +8,7 @@ This project focuses on analyzing the Employee Distribution data of an organizat
 - [Tools and Technologies](#tools-and-technologies)
 - [Data Cleaning and Data Analysis using MySQL](#getting-started)
 - [Dashboard](#contributing)
-- [Git Commands](#license)
+- [Git Commands](#git-commands-used)
 
 ## Probelm Statement
 
@@ -59,8 +59,6 @@ git branch -M main
 git remote add origin https://github.com/user_name/Employee-Data-Analysis.git
 git push -u origin main
 ```
-## Getting Started
-
 **Clone the Repository:**
    ```bash
    git clone https://github.com/your-username/employee-distribution-analysis.git
