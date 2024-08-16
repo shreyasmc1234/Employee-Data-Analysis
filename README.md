@@ -2,12 +2,21 @@
 
 This project focuses on analyzing the Employee Distribution data of an organization to develop a Power BI dashboard. The dashboard provides the CEO with real-time insights into the organization's workforce, aiding in strategic decision-making.
 
+## Table of Contents
+- [Problem Statement](#project-overview)
+- [Project Overview](#key-features)
+- [Tools and Technologies](#tools-and-technologies)
+- [Data Cleaning and Data Analysis using MySQL](#getting-started)
+- [Dashboard](#contributing)
+- [Git Commands](#license)
 
+## Probelm Statement
+
+The CEO of the organization seeks a real-time, data-driven understanding of the company's workforce. The existing employee data is stored in a raw format, making it challenging to extract actionable insights. The goal of this project is to analyze the employee distribution data and develop a Power BI dashboard that provides the CEO with critical insights into the workforcE.
+  
 ## Project Overview
 
 The goal of this project is to transform raw employee data into actionable insights through data analysis and visualization. The Power BI dashboard will offer a comprehensive view of various workforce metrics, including department distribution, gender distribution and demographic breakdowns.
-
-## Key Features
 
 - **Real-Time Insights:** The dashboard updates in real-time to provide the latest data on employee distribution.
 - **Interactive Visualizations:** Users can interact with various charts and graphs to explore the data from different perspectives.
@@ -18,7 +27,24 @@ The goal of this project is to transform raw employee data into actionable insig
 
 - **MySQL Workbech:** For Data Cleaning and ETL.
 - **Power BI:** For creating the interactive dashboard.
-- **Excel/CSV:** Used for storing and preparing the raw data.
+- **Excel/CSV:** Used for storing and preparing the raw data (Human Resources.CSV).
+
+## Data Cleaning and Data Analysis using MySQL
+
+1. To Display total number of records
+   ```bash
+   select count(*) from hr_details;
+   +----------+
+   | count(*) |
+   +----------+
+   |    22214 |
+   +----------+
+   ```
+   Understanding the data :
+   1. The Excel file consists almost 22214 records from the year 2000 to 2020.
+   2. All the Columns having similar datatype that is text.
+   3. Some records had negative ages and these were excluded during querying(967 records). Ages used were 18 years and above.
+   4. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
 
 ## Git Commands Used
 
@@ -35,9 +61,9 @@ git push -u origin main
 ```
 ## Getting Started
 
-1. **Clone the Repository:**
+**Clone the Repository:**
    ```bash
    git clone https://github.com/your-username/employee-distribution-analysis.git
-
+   ```
    
 
