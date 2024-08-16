@@ -47,7 +47,7 @@ Total number of records : 22214
    4. Some records had negative ages and these were excluded during querying(967 records). Ages used were 18 years and above.
    5. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
       
-1. Data Cleaning
+Data Cleaning
     -- Renaming the Invalid character named column into "employee_id"
     ```bash
     ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
@@ -95,9 +95,12 @@ Total number of records : 22214
    age=timestampdiff(YEAR,birthdate,CURDATE());
    ```
 
-2. Data Analysis
+Data Analysis
+
    -- Data is analysed and written set of select queries to understand the data.
+   
    -- Queries that are used to analyze the data is available in [SQL Queries](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/SQL%20Queries)
+   
    -- Extracted the produced report from select queries in .CSV format [Extracted Data](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/Extracted%20data%20from%20MySQL)
    
  
