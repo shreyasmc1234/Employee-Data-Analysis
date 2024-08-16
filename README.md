@@ -119,7 +119,7 @@ git push -u origin main
 ```
 **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/employee-distribution-analysis.git
+   git clone https://github.com/username/employee-distribution-analysis.git
    ```
    
 
