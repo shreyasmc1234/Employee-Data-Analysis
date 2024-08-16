@@ -49,10 +49,54 @@ The goal of this project is to transform raw employee data into actionable insig
    5. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
       
 3. Data Cleaning
-    We are renaming the Invalid character named column into "employee_id"
+    -- Renaming the Invalid character named column into "employee_id"
     ```bash
     ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
     ```
+    
+    -- Changing the datatype of employee_id column
+    ```bash
+    ALTER TABLE hr_details MODIFY employee_id  varchar(20);
+    ```
+
+    -- Updating the date format of birthdate and hire_date columns because those are invalid formats
+    ```bash
+    update hr_details set birthdate = case
+    when birthdate like '%-%' then date_format(str_to_date(birthdate,'%m-%d-%Y'),'%Y-%m-%d')
+    when birthdate like '%/%' then date_format(str_to_date(birthdate,'%m/%d/%Y'),'%Y-%m-%d')
+    else NULL
+    end;
+
+    update hr_details set hire_date = case
+    when hire_date like '%-%' then date_format(str_to_date(hire_date,'%m-%d-%Y'),'%Y-%m-%d')
+    when hire_date like '%/%' then date_format(str_to_date(hire_date,'%m/%d/%Y'),'%Y-%m-%d')
+    else NULL
+    end;
+    ```
+
+    -- Changing the datatype for those columns
+   ```bash
+    Alter table hr_details modify column hire_date date; 
+    Alter table hr_details modify column birthdate date;
+   ```
+
+   -- Termdate is the column which contains invalid date and null values, Handling those invalid records.
+   ```bash
+   update hr_details set termdate=date(str_to_date(termdate,'%Y-%m-%d %H:%i:%s UTC')) where termdate is not null and termdate != ' ';
+   ```
+   
+   -- Adding a new column named "age" to calculate the age.
+   ```bash
+   ALTER TABLE hr_details ADD age INT after last_name;
+   ```
+
+   -- Updating the values to the column age
+   ```bash
+   UPDATE hr_details SET
+   age=timestampdiff(YEAR,birthdate,CURDATE());
+   ```
+   
+
     
     
 
