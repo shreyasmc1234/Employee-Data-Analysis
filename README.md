@@ -3,7 +3,7 @@
 This project focuses on analyzing the Employee Distribution data of an organization to develop a Power BI dashboard. The dashboard provides the CEO with real-time insights into the organization's workforce, aiding in strategic decision-making.
 
 ## Table of Contents
-- [Problem Statement](#project-overview)
+- [Problem Statement](#problem-statement)
 - [Project Overview](#key-features)
 - [Tools and Technologies](#tools-and-technologies)
 - [Data Cleaning and Data Analysis using MySQL](#getting-started)
