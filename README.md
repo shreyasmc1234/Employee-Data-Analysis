@@ -6,7 +6,7 @@ This project focuses on analyzing the Employee Distribution data of an organizat
 - [Problem Statement](#problem-statement)
 - [Project Overview](#key-features)
 - [Tools and Technologies](#tools-and-technologies)
-- [Data Cleaning and Data Analysis using MySQL](#getting-started)
+- [Data Cleaning and Data Analysis using MySQL](#data-cleaning-and-data-analysis-using-MySQL)
 - [Dashboard](#contributing)
 - [Git Commands](#git-commands-used)
 
@@ -31,7 +31,8 @@ The goal of this project is to transform raw employee data into actionable insig
 
 ## Data Cleaning and Data Analysis using MySQL
 
-1. To Display total number of records
+1. Data Analysis
+   To Display total number of records
    ```bash
    select count(*) from hr_details;
    +----------+
@@ -43,8 +44,18 @@ The goal of this project is to transform raw employee data into actionable insig
    Understanding the data :
    1. The Excel file consists almost 22214 records from the year 2000 to 2020.
    2. All the Columns having similar datatype that is text.
-   3. Some records had negative ages and these were excluded during querying(967 records). Ages used were 18 years and above.
-   4. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
+   3. First column name is misleading.
+   4. Some records had negative ages and these were excluded during querying(967 records). Ages used were 18 years and above.
+   5. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
+      
+3. Data Cleaning
+    We are renaming the Invalid character named column into "employee_id"
+    ```bash
+    ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
+    ```
+    
+    
+
 
 ## Git Commands Used
 
