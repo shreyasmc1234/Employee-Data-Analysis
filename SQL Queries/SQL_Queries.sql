@@ -31,7 +31,7 @@ select * from hr_details;
 >> Data Cleaning
 >> We are renaming the Invalid character named column into "employee_id"
 
-ALTER TABLE hr_details RENAME COLUMN ﻿id TO employee_id;
+ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
 
 >> Chaning the datatype of employee_id
 
