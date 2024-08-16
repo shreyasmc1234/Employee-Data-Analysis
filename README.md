@@ -73,7 +73,7 @@ Data Cleaning
     end;
     ```
 
-    -- Changing the datatype for those columns
+  -- Changing the datatype for those columns
    ```bash
     Alter table hr_details modify column hire_date date; 
     Alter table hr_details modify column birthdate date;
