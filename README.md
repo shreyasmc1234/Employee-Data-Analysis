@@ -102,10 +102,11 @@ Data Analysis
    -- Queries that are used to analyze the data is available in [SQL Queries](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/SQL%20Queries)
    
    -- Extracted the produced report from select queries in .CSV format [Extracted Data](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/Extracted%20data%20from%20MySQL)
-   
+
+   -- By using the result set created the Dashboard by using Power BI.
  
    
-
+## Dashboard
 
 ## Git Commands Used
 
