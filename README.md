@@ -85,17 +85,19 @@ Total number of records : 22214
     Alter table hr_details modify column birthdate date;
    ```
 
-   -- Termdate is the column which contains invalid date and null values, Handling those invalid records.
+  5. Termdate is the column which contains invalid date and null values, Handling those invalid records.
    ```bash
    update hr_details set termdate=date(str_to_date(termdate,'%Y-%m-%d %H:%i:%s UTC')) where termdate is not null and termdate != ' ';
    ```
    
-   -- Adding a new column named "age" to calculate the age.
-   ```bash
+  6. Adding a new column named "age" to calculate the age.
+  
+   ```
    ALTER TABLE hr_details ADD age INT after last_name;
    ```
 
-   -- Updating the values to the column age
+   7. Updating the values to the column age
+    
    ```bash
    UPDATE hr_details SET
    age=timestampdiff(YEAR,birthdate,CURDATE());
