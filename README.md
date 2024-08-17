@@ -115,6 +115,10 @@ Total number of records : 22214
  
    
 ## Dashboard
+![Employee Distribution Dashboard](https://github.com/shreyasmc1234/Employee-Data-Analysis/blob/12d574c6d099a34fc2aebeb0e4003fc6fc50a780/Power%20BI%20Reports%20and%20Final%20PDF/Employee_Ditribution1.png)
+
+![Employee Distribution Dashboard](https://github.com/shreyasmc1234/Employee-Data-Analysis/blob/main/Power%20BI%20Reports%20and%20Final%20PDF/Employee_Ditribution2.png?raw=true)
+
 
 ## Git Commands Used
 
