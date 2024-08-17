@@ -120,6 +120,49 @@ Total number of records : 22214
 ![Employee Distribution Dashboard](https://github.com/shreyasmc1234/Employee-Data-Analysis/blob/main/Power%20BI%20Reports%20and%20Final%20PDF/Employee_Ditribution2.png?raw=true)
 
 
+## Conclusion
+- <h5>Gender Distribution:</h5>
+
+The employee population is predominantly male, with a balanced gender distribution across most departments.
+Despite the overall balance, male employees slightly outnumber female employees across the organization.
+
+- <h5>Racial Composition:
+
+The workforce is predominantly White, with Native Hawaiian and American Indian being the least represented races within the organization.
+
+- <h5>Age Demographics:
+
+The age range of employees spans from 20 to 57 years old.
+The majority of employees fall within the 25-34 age group, followed by those in the 35-44 age group. The smallest age group is 55-64.
+
+- <h5>Work Location:
+
+A significant number of employees work at the headquarters, with fewer employees working remotely.
+
+- <h5>Employee Tenure:
+
+The average tenure for terminated employees is approximately 7 years.
+The average tenure across departments is around 8 years, with the Legal and Auditing departments having the highest average tenure, while the Services, Sales, and Marketing departments have the lowest.
+
+- <h5>Turnover Rates:
+
+The Marketing department exhibits the highest turnover rate, followed by the Training department.
+The departments with the lowest turnover rates are Research and Development, Support, and Legal.
+
+- <h5>Geographical Distribution:
+
+A large portion of the workforce is based in Ohio, making it the most represented state among employees.
+
+- <h5>Employment Trends:
+
+The net change in the number of employees has shown an upward trend over the years, indicating organizational growth.
+
+- <h5>Data Cleaning and Processing:
+
+Performed data cleaning using update, insert, and alter statements to ensure data validity and accuracy.
+Invalid data entries were cleaned through the ETL process, enhancing the reliability of the analysis results.
+These insights provide a comprehensive understanding of the workforce dynamics within the organization, highlighting key areas such as demographic distribution, tenure, turnover rates, and employment trends.
+
 ## Git Commands Used
 
 Here are the Git commands used to initialize the repository and push it to GitHub:
