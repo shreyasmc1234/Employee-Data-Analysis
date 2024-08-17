@@ -48,19 +48,19 @@ Total number of records : 22214
    5. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
       
 ### Data Cleaning
-  -- Renaming the Invalid character named column into "employee_id"
+  1. Renaming the Invalid character named column into "employee_id"
   
     
     ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
     
     
-  -- Changing the datatype of employee_id column
+  2. Changing the datatype of employee_id column
   
     
     ALTER TABLE hr_details MODIFY employee_id  varchar(20);
     
 
-  -- Updating the date format of birthdate and hire_date columns because those are invalid formats
+  3. Updating the date format of birthdate and hire_date columns because those are invalid formats
   
     
     update hr_details set birthdate = case
@@ -78,7 +78,7 @@ Total number of records : 22214
     end;
     
 
-  -- Changing the datatype for those columns
+  4. Changing the datatype for those columns
   
    ```bash
     Alter table hr_details modify column hire_date date; 
@@ -101,15 +101,15 @@ Total number of records : 22214
    age=timestampdiff(YEAR,birthdate,CURDATE());
    ```
 
-Data Analysis
+### Data Analysis
 
-   -- Data is analysed and written set of select queries to understand the data.
+   1. Data is analysed and written set of select queries to understand the data.
    
-   -- Queries that are used to analyze the data is available in [SQL Queries](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/SQL%20Queries)
+   2. Queries that are used to analyze the data is available in [SQL Queries](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/SQL%20Queries)
    
-   -- Extracted the produced report from select queries in .CSV format [Extracted Data](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/Extracted%20data%20from%20MySQL)
+   3. Extracted the produced report from select queries in .CSV format [Extracted Data](https://github.com/shreyasmc1234/Employee-Data-Analysis/tree/main/Extracted%20data%20from%20MySQL)
 
-   -- By using the result set created the Dashboard by using Power BI.
+   4. By using the result set created the Dashboard by using Power BI.
  
    
 ## Dashboard
