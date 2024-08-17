@@ -47,33 +47,39 @@ Total number of records : 22214
    4. Some records had negative ages and these were excluded during querying(967 records). Ages used were 18 years and above.
    5. Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
       
-Data Cleaning
-    -- Renaming the Invalid character named column into "employee_id"
-    ```bash
-    ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
-    ```
+### Data Cleaning
+  -- Renaming the Invalid character named column into "employee_id"
+  
     
-    -- Changing the datatype of employee_id column
-    ```bash
+    ALTER TABLE hr_details RENAME COLUMN ﻿id?!. TO employee_id;
+    
+    
+  -- Changing the datatype of employee_id column
+  
+    
     ALTER TABLE hr_details MODIFY employee_id  varchar(20);
-    ```
+    
 
-    -- Updating the date format of birthdate and hire_date columns because those are invalid formats
-    ```bash
+  -- Updating the date format of birthdate and hire_date columns because those are invalid formats
+  
+    
     update hr_details set birthdate = case
     when birthdate like '%-%' then date_format(str_to_date(birthdate,'%m-%d-%Y'),'%Y-%m-%d')
     when birthdate like '%/%' then date_format(str_to_date(birthdate,'%m/%d/%Y'),'%Y-%m-%d')
     else NULL
     end;
-
+    
+    
+    
     update hr_details set hire_date = case
     when hire_date like '%-%' then date_format(str_to_date(hire_date,'%m-%d-%Y'),'%Y-%m-%d')
     when hire_date like '%/%' then date_format(str_to_date(hire_date,'%m/%d/%Y'),'%Y-%m-%d')
     else NULL
     end;
-    ```
+    
 
   -- Changing the datatype for those columns
+  
    ```bash
     Alter table hr_details modify column hire_date date; 
     Alter table hr_details modify column birthdate date;
